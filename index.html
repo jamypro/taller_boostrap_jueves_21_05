@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>agencia de viajes</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/validate/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        padding-top: 56px;
+      }
+      .carousel-item img {
+        height: 70vh;
+        object-fit: cover;
+      }
+      .card-img-top {
+        height: 250px;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">Viajes</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#destinos">Destinos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contacto">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div
+      id="heroCarousel"
+      class="carousel slide carousel-fade"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="4000">
+          <img
+            src="./imagen_1.avif"
+            class="d-block w-100"
+            alt="Playa Paradisiaca"
+          />
+          <div
+            class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3"
+          >
+            <h5>Playas Paradisiacas</h5>
+            <p>Relájate en las mejores costas del mundo con todo incluido.</p>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="4000">
+          <img src="imagen_2.jpg" class="d-block w-100" alt="Montañas" />
+          <div
+            class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3"
+          >
+            <h5>Aventura en la Montaña</h5>
+            <p>
+              Descubre senderos mágicos y conecta con la naturaleza de altura.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="4000">
+          <img
+            src="imagen_3.webp"
+            class="d-block w-100"
+            alt="Camping bajo estrellas"
+          />
+          <div
+            class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3"
+          >
+            <h5>Campamentos Estelares</h5>
+            <p>Noches inolvidables bajo el cielo más limpio del planeta.</p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#heroCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#heroCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+
+    <section id="destinos" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5 fw-bold">Nuestros Destinos Destacados</h2>
+
+        <div class="row g-4">
+          <div class="col-12 col-md-4">
+            <div class="card h-100 shadow-sm">
+              <img
+                src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=600&q=80"
+                class="card-img-top"
+                alt="Bali, Indonesia"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title fw-bold">Bali, Indonesia</h5>
+                <p class="card-text text-muted">
+                  Explora templos antiguos, playas exóticas de arena blanca y
+                  sumérgete en una cultura espiritual única.
+                </p>
+                <button
+                  type="button"
+                  class="btn btn-primary mt-auto"
+                  data-bs-toggle="modal"
+                  data-bs-target="#infoModal"
+                  data-destino="Bali, Indonesia"
+                  data-detalle="Este paquete incluye 7 noches en hotel de 5 estrellas, tours guiados por templos sagrados, transporte local y desayunos buffet incluidos."
+                >
+                  Ver más detalles
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div class="card h-100 shadow-sm">
+              <img
+                src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=600&q=80"
+                class="card-img-top"
+                alt="Kioto, Japón"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title fw-bold">Kioto, Japón</h5>
+                <p class="card-text text-muted">
+                  Pasea bajo los cerezos en flor, admira los santuarios
+                  tradicionales y vive la magia del Japón clásico.
+                </p>
+                <button
+                  type="button"
+                  class="btn btn-primary mt-auto"
+                  data-bs-toggle="modal"
+                  data-bs-target="#infoModal"
+                  data-destino="Kioto, Japón"
+                  data-detalle="Incluye pases para el tren bala (Shinkansen), alojamiento en un Ryokan tradicional, cena comunitaria japonesa y guías bilingües."
+                >
+                  Ver más detalles
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div class="card h-100 shadow-sm">
+              <img
+                src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=600&q=80"
+                class="card-img-top"
+                alt="París, Francia"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title fw-bold">París, Francia</h5>
+                <p class="card-text text-muted">
+                  Descubre la ciudad de la luz, su exquisita gastronomía, museos
+                  icónicos y monumentos que te enamorarán.
+                </p>
+                <button
+                  type="button"
+                  class="btn btn-primary mt-auto"
+                  data-bs-toggle="modal"
+                  data-bs-target="#infoModal"
+                  data-destino="París, Francia"
+                  data-detalle="Disfruta de entradas prioritarias al Museo del Louvre y la Torre Eiffel, un crucero nocturno por el río Sena y un taller de repostería francesa."
+                >
+                  Ver más detalles
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div
+      class="modal fade"
+      id="infoModal"
+      tabindex="-1"
+      aria-labelledby="infoModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title fw-bold" id="infoModalLabel">
+              Detalles del Destino
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-shadow="none"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p id="modalDestinoTexto"></p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+            <button
+              type="button"
+              class="btn btn-success"
+              data-bs-dismiss="modal"
+              onclick="alert('¡Reservado con éxito!')"
+            >
+              Reservar Ahora
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="contacto" class="py-5">
+      <div class="container" style="max-width: 600px">
+        <h2 class="text-center mb-4 fw-bold">Contáctanos</h2>
+        <p class="text-center text-muted mb-4">
+          ¿Tienes dudas? Déjanos un mensaje y un asesor te responderá lo antes
+          posible.
+        </p>
+
+        <form action="#" method="POST">
+          <div class="mb-3">
+            <label for="nombre" class="form-label fw-semibold"
+              >Nombre Completo</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="nombre"
+              placeholder="Ingresa tu nombre"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label fw-semibold"
+              >Correo Electrónico</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="nombre@correo.com"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="asunto" class="form-label fw-semibold">Asunto</label>
+            <input
+              type="text"
+              class="form-control"
+              id="asunto"
+              placeholder="Ej: Cotización de paquete turístico"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="mensaje" class="form-label fw-semibold">Mensaje</label>
+            <textarea
+              class="form-control"
+              id="mensaje"
+              rows="4"
+              placeholder="Escribe aquí tus dudas en detalle..."
+              required
+            ></textarea>
+          </div>
+          <div class="d-grid">
+            <button type="submit" class="btn btn-dark btn-lg">
+              Enviar Mensaje
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+      <p class="mb-0">&copy; 2026 Viajes. Jeison Males - Jhon Guaca.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      const infoModal = document.getElementById("infoModal");
+      if (infoModal) {
+        infoModal.addEventListener("show.bs.modal", (event) => {
+          const button = event.relatedTarget;
+          const destino = button.getAttribute("data-destino");
+          const detalle = button.getAttribute("data-detalle");
+
+          const modalTitle = infoModal.querySelector(".modal-title");
+          const modalBodyText = infoModal.querySelector("#modalDestinoTexto");
+
+          modalTitle.textContent = `Plan de Viaje: ${destino}`;
+          modalBodyText.textContent = detalle;
+        });
+      }
+    </script>
+  </body>
+</html>
